@@ -45,18 +45,30 @@
     <li><strong>Contacts data:</strong> who you've added as a contact,
     and requests you've sent or received.</li>
     <li><strong>Usage data:</strong> basic technical data needed to
-    operate the app, such as device type and app version, collected
-    through our backend provider (Firebase/Google Cloud).</li>
+    operate the app (such as device type and app version), collected
+    only through the core Firebase Authentication and Firestore SDKs
+    that power the app's functionality. We do <strong>not</strong>
+    integrate Firebase Analytics, Google Analytics, Crashlytics, or any
+    advertising SDK — Analytics and Ads are explicitly disabled in our
+    configuration.</li>
   </ul>
-  <p>We do <strong>not</strong> use advertising or analytics tracking
-  in this app, and we don't sell your data to anyone, ever.</p>
+  <p>Because the app is distributed through Apple TestFlight, Apple
+  also separately collects data needed to operate TestFlight itself —
+  such as your email address (to send the install invitation) and
+  crash/diagnostic data from your device, if you opt in to sharing it
+  with developers. Apple acts as an independent data controller for
+  this data under its own privacy policy, not on our behalf; see
+  <a href="https://www.apple.com/legal/privacy/">Apple's Privacy
+  Policy</a> for details.</p>
+  <p>We do not sell your data to anyone, ever.</p>
 
   <h2>3. Why we process this data, and our legal basis</h2>
   <table>
     <tr><th>Purpose</th><th>Legal basis (GDPR Art. 6)</th></tr>
     <tr><td>Creating and running your account</td><td>Performance of a contract (Art. 6(1)(b))</td></tr>
     <tr><td>Letting you search your network and connect with others</td><td>Performance of a contract</td></tr>
-    <tr><td>Showing your profile to contacts and, for limited fields, to people you haven't yet connected with</td><td>Your consent, given by choosing to enter that information (Art. 6(1)(a))</td></tr>
+    <tr><td>Showing your full profile to your accepted contacts</td><td>Performance of a contract — this is the core service</td></tr>
+    <tr><td>Showing limited, matched profile fields to people you haven't yet connected with (second-degree search)</td><td>Your consent, given by choosing to add that information to a searchable category (Art. 6(1)(a))</td></tr>
     <tr><td>Security, fraud prevention, and enforcing our Terms of Service</td><td>Legitimate interest (Art. 6(1)(f))</td></tr>
   </table>
 
@@ -77,16 +89,27 @@
     any signed-in user (never the list of who those connections
     are).</li>
   </ul>
+  <p>This Privacy Policy and our other legal documents are hosted on
+  <strong>GitHub Pages</strong>. Simply visiting that website (separate
+  from using the app itself) causes GitHub to log your IP address and
+  basic request data, as described in
+  <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's
+  Privacy Statement</a>. We don't control this logging and it's
+  unrelated to your use of the app itself.</p>
 
   <h2>5. International data transfers</h2>
-  <p>Because you've told us you intend to invite users from around the
-  world: our infrastructure (Firebase/Google Cloud) may process data
-  in countries outside your own, including the United States. Where
-  this involves transferring data out of the EU/EEA, we rely on
-  Google's Standard Contractual Clauses as the transfer safeguard
-  required under GDPR. By using the app, you acknowledge that your
-  data may be processed in a country with different data protection
-  laws than your own.</p>
+  <p>Our primary database (Firestore) is hosted in the
+  <strong>eur3</strong> region (a multi-region location spanning
+  Belgium and the Netherlands), meaning your core app data is stored
+  within the EU. Some processing by our infrastructure
+  provider, Google (which operates Firebase), may still involve the
+  United States — for example, authentication and certain operational
+  services. Where that happens, Google is certified under the
+  <strong>EU-US Data Privacy Framework (DPF)</strong>, which we rely on
+  as our primary legal basis for these transfers, with Google's
+  Standard Contractual Clauses as a backup safeguard. By using the app,
+  you acknowledge that some processing may occur outside your own
+  country under these protections.</p>
 
   <h2>6. How long we keep your data</h2>
   <p>We keep your account and profile data for as long as your account
@@ -111,9 +134,13 @@
     based on consent (e.g. by removing an item from your profile).</li>
   </ul>
   <p>To exercise any of these rights, contact us using the details in
-  our <a href="impressum.html">Legal Notice</a>. If you're in the
-  EU/EEA, you also have the right to lodge a complaint with your local
-  data protection supervisory authority.</p>
+  our <a href="impressum.html">Legal Notice</a>. You also have the
+  right to lodge a complaint with a data protection supervisory
+  authority. As the controller is based in Hesse, Germany, the
+  competent authority there is the <strong>Hessischer Beauftragter für
+  Datenschutz und Informationsfreiheit (HBDI)</strong> — but if you
+  live in the EU/EEA, you can also complain to your own local authority
+  instead.</p>
 
   <h2>8. Children</h2>
   <p>Wasta is not intended for anyone under the age of 16. We do not
@@ -130,9 +157,13 @@
   narrowly as possible throughout the app.</p>
 
   <h2>10. Changes to this policy</h2>
-  <p>We may update this policy as the app evolves. We'll update the
-  "Last updated" date above when we do. Continued use of the app after
-  a change means you accept the updated policy.</p>
+  <p>We may update minor or non-material parts of this policy as the
+  app evolves, and will update the "Last updated" date when we do. For
+  any <strong>material</strong> change — one that meaningfully affects
+  how we process your data — we will notify you inside the app and ask
+  you to actively accept the updated policy before you can continue
+  using Wasta. Simply continuing to use the app is not treated as
+  acceptance of a material change.</p>
 
   <h2>11. Contact</h2>
   <p>Questions about this policy or your data can be sent to the
